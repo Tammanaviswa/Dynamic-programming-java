@@ -1,0 +1,35 @@
+//given number is prime or not
+import java .util.Scanner;
+import java.lang.Math;
+class p
+{
+public static void main(String[] args)
+	{
+  Scanner obj=new Scanner(System.in);
+  System.out.println("Enter no of test cases:");
+  int tc=obj.nextInt();
+  for(int j=0;j<tc;j++){
+  int a=obj.nextInt();
+   
+  int c=0;
+  if(a!=1)
+  {
+  for(int i=2;(i*i)<=a;i++)
+  {
+  if(a%i==0)
+  {
+  c=c+1;
+  }
+  }
+  if(c<1)
+  {
+  System.out.println("Prime");
+  }
+  else
+  {
+  System.out.println("Not Prime");
+  }}
+  else{
+	System.out.println("Not Prime or composite");  
+  }}
+  }}
