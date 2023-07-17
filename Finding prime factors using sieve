@@ -1,0 +1,56 @@
+//Finding prime factors using sieve
+import java.util.Scanner;
+import java.lang.Math;
+class sieve
+{
+	
+	static final int maxn=10001;
+	static int p[]=new int[maxn];
+	public static void sieve(){
+		p[0]=0;
+		p[1]=1;
+		for(int i=2;i<maxn;i++)
+		{
+			p[i]=i;
+		}
+		for(int i=4;i<maxn;i+=2)
+		{
+			p[i]=2;
+		}
+		for(int i=3;i*i<maxn;i++)
+		{
+			if(p[i]==i)
+			{
+				for(int j=i*i;j<maxn;j+=i)
+				{
+					if(p[j]==j)
+					{
+						p[j]=i;
+					}
+				}
+			}
+		}
+	
+	 
+	}
+	
+public static void main(String[] args)
+	{
+     Scanner obj=new Scanner(System.in);   
+     
+	 sieve();
+	 int tc=obj.nextInt();
+	 for(int i=0;i<tc;i++){
+	    int a=obj.nextInt();
+		while(a!=1)
+		{
+			System.out.println(p[a]);
+			a=a/p[a];
+		}
+	    
+	 }
+	 
+	 
+
+    }
+}
