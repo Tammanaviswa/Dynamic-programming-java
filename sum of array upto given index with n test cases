@@ -1,0 +1,40 @@
+//sum of array upto given index with n test cases
+import java.util.Scanner;
+import java.lang.Math;
+class main
+{
+public static void main(String[] args)
+	{
+   Scanner obj=new Scanner(System.in);
+   System.out.print("Enter Size of array:");
+   int a=obj.nextInt();
+   int arr[]=new int[a];
+   
+   
+   System.out.print("Enter no of test case:");
+   int tc=obj.nextInt();
+   int b[]=new int[tc];
+  
+   int sum=0;
+   int sumt[]=new int[a];
+   
+   System.out.print("Enter elements array:");
+   for(int i=0;i<a;i++)
+   {
+   arr[i]=obj.nextInt();
+   sum=sum+arr[i];
+   arr[i]=sum;
+   }
+   
+   for(int i=0;i<tc;i++){ 
+   System.out.print("Enter no of values need to sum of array:");
+   int tem=obj.nextInt();
+   if(tem>0 && tem<tc){
+   System.out.println("sum:"+arr[tem-1]);
+   }
+   else
+   {
+	  System.out.println("Enter correct value"); 
+   }
+   }
+}}
