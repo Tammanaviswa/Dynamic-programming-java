@@ -1,0 +1,37 @@
+//create a array ,and it saves as ntimes 
+import java .util.Scanner;
+class main
+{
+public static void main(String[] args)
+	{
+  Scanner obj=new Scanner(System.in);
+  System.out.print("Enter Size of Array:");
+  int s=obj.nextInt();
+  int a[]=new int[s];
+  
+  for(int i=0;i<s;i++)
+  {
+	   a[i]=obj.nextInt();
+  }
+  
+  System.out.print("Enter how many times array should repeat:");
+  int k=obj.nextInt();
+  int p=s*k;
+  int fa[]=new int[p];
+  int j=0;
+  
+  for(int i=0;i<k;i++)
+  {
+    for(int c=0;c<s;c++)
+	{
+	 fa[j]=a[c];
+	 j=j+1;
+	 }
+  }
+  
+  for(int i=0;i<p;i++)
+  {
+	  System.out.println(fa[i]);
+  }
+	}
+}
